@@ -12,3 +12,106 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+/* Like */
+
+.like-icon .main {
+  fill: var(--page-background-color, #fff);
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon .body {
+  fill: var(--page-background-color, #fff);
+  transition: fill 0.3s linear;
+}
+
+.like-icon .shape {
+  fill: var(--like-shape-color, #000);
+  transition: fill 0.1s linear;
+}
+
+.like-icon .heart {
+  transform-origin: center;
+}
+
+.like-icon .splashes {
+  opacity: 0;
+}
+
+/* Hover */
+
+.like-icon:hover .main {
+  fill: var(--like-shape-color, #000);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .body {
+  fill: var(--like-shape-color, #000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Active */
+
+.like-icon:active .main {
+  fill: var(--like-splashes-color, #ff0000);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .body {
+  fill: var(--like-splashes-color, #ff0000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Liked */
+
+.like-icon.is-liked .main {
+  fill: var(--like-splashes-color, #ff0000);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .body {
+  fill: var(--like-splashes-color, #ff0000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .shape {
+  fill: var(--like-splashes-color, #ff0000);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  animation: heart 0.3s ease-in 0.1s 1 alternate;
+}
+
+.like-icon.is-liked .splashes {
+  animation: splashes 0.3s ease-in 0.3s 1 alternate;
+}
+
+/* Animation */
+
+@keyframes select {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(4px);
+  }
+}
+
+@keyframes heart {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes splashes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
