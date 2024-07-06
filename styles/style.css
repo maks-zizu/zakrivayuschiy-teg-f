@@ -374,5 +374,6 @@
   .card__img-tag {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--page-background-color, #fff);
+    text-stroke: 1px var(--page-background-color, #fff);
   }
 }
