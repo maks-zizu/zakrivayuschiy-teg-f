@@ -24,7 +24,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   padding-block-start: 100px;
-  font-family: var(--page-main-font-family, "Inter", sans-serif);
+  font-family: var(--page-main-font-family, "Inter"), sans-serif;
   font-variation-settings: "wght" var(--page-font-weight, 400);
   color: var(--text-color, #000);
 }
@@ -43,7 +43,7 @@
   display: grid;
   justify-items: center;
   justify-content: center;
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  font-family: var(--page-accent-font-family, "PressStart2P"), fantasy;
   text-transform: uppercase;
   line-height: normal;
 }
@@ -78,7 +78,7 @@
   appearance: none;
 }
 
-.theme-menu__button:not(:disabled)::after {
+.theme-menu__button::after {
   content: "";
   display: block;
   inline-size: 100%;
@@ -122,7 +122,7 @@
   display: grid;
   justify-items: center;
   padding-block-end: 105px;
-  gap: 57px;
+  gap: 54px;
 }
 
 /* Content */
@@ -134,7 +134,7 @@
 
 .card {
   margin-inline: auto;
-  max-inline-size: 696px;
+  max-inline-size: 700px;
   border: 2px solid var(--text-color, #000);
   background: var(--page-background-color, #fff);
 }
@@ -160,7 +160,7 @@
   z-index: 1;
   opacity: 0.5;
   color: var(--text-color, #000);
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  font-family: var(--page-accent-font-family, "PressStart2P"), fantasy;
   font-size: 14px;
   line-height: normal;
   text-transform: uppercase;
@@ -218,9 +218,11 @@
 .button {
   position: relative;
   z-index: 1;
+  min-width: 130px;
+  min-height: 38px;
   border: 2px solid var(--text-color, #000);
-  padding: 10px 36px;
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  padding: 10px 20px;
+  font-family: var(--page-accent-font-family, "PressStart2P"), fantasy;
   font-size: 14px;
   text-transform: inherit;
   background: var(--page-background-color, #fff);
@@ -260,7 +262,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 15px 20px;
+  padding: 10px 20px;
 }
 
 .button__text,
@@ -286,8 +288,9 @@
   background: var(--page-background-color, #fff);
   border: 2px solid var(--text-color, #000);
   padding: 25px 30px;
+  font-size: 14px;
   color: var(--text-color, #000);
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  font-family: var(--page-accent-font-family, "PressStart2P"), fantasy;
   line-height: 1.5;
   text-transform: uppercase;
 }
